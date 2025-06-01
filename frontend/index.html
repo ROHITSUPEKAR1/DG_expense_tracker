@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 id="heading">DreamsGuider.com</h1>
+
+    <form id="transaction-form">
+      <input type="text" id="client" placeholder="Client Name" required />
+      <input type="number" id="amount" placeholder="Amount" required />
+      <select id="type">
+        <option value="credit">Credit</option>
+        <option value="debit">Debit</option>
+      </select>
+      <input type="date" id="date" required />
+      <button type="submit">Add Transaction</button>
+    </form>
+
+    <div class="filter">
+      <h3>Filter by Date:</h3>
+      <input type="date" id="start-date" />
+      <input type="date" id="end-date" />
+      <button onclick="loadTransactions()" id="filterbtn">Filter</button>
+    </div>
+
+    <h2>Transactions</h2>
+    <ul id="transaction-list"></ul>
+    <h3 id="balance">Balance: ₹0</h3>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
